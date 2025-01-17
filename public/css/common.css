@@ -1,0 +1,24 @@
+@charset "UTF-8";
+body {
+  // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.noto-sans-jp-<uniquifier> {
+    font-family: 'Noto Sans JP', serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+}
+
+body {
+  background-color: #e8e8e8;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
