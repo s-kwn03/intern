@@ -1,121 +1,93 @@
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="アンティー・システムの求人サイトです。" />
-    <title>SAMPLE CAREER RECRUITMENT</title>
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alkalami&family=Mr+Dafoe&family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<header class="header">
+  <h1 class="top__logo">
+    <img src="public/images/top-logo.svg" alt="トップページロゴ" />
+  </h1>
 
-  <header class="header">
-    <h1 class="top__logo">
-      <img src="public/images/top-logo.svg" alt="トップページロゴ" />
-    </h1>
-
-    <div class="top__linl--nav">
-      <div class="top__link--entry">
-        <a href="#">Entry</a>
-      </div>
-
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <div class="top__linl--nav">
+    <div class="top__link--entry">
+      <a href="#">Entry</a>
     </div>
 
-    <style>
-      @charset "UTF-8";
-      body {
-        // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 
-.noto-sans-jp-<uniquifier> {
-          font-family: 'Noto Sans JP', serif;
-          font-optical-sizing: auto;
-          font-weight: <weight>;
-          font-style: normal;
-        }
-      }
+  <style>
+    @charset "UTF-8";
 
-      body {
-        background-color: #e8e8e8;
-      }
+    body {
+      background-color: #e8e8e8;
+    }
 
-      ul {
-        list-style: none;
-      }
-      a {
-        color: #000;
-        text-decoration: none;
-      }
+    ul {
+      list-style: none;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+    }
 
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-inline: 40px;
-        margin-block-start: 14px;
-      }
-      /* ロゴ */
-      .top__logo {
-        width: 332.98px;
-        height: 30.78px;
-      }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-inline: 40px;
+      margin-block-start: 14px;
+    }
+    /* ロゴ */
+    .top__logo {
+      width: 332.98px;
+      height: 30.78px;
+    }
 
-      /* エントリーとハンバーガー */
-      .top__linl--nav {
-        display: flex;
-        align-items: center;
-        padding-block:;
-      }
+    /* エントリーとハンバーガー */
+    .top__linl--nav {
+      display: flex;
+      align-content: center;
+      padding-block:;
+    }
 
-      /* エントリー */
-      .top__link--entry {
-        width: 174px;
-        height: 46px;
-        font-size: 24px;
-        margin-inline-end: 24px;
-        padding-inline: 48px;
-        padding-block: auto;
-        border-left: 1px solid #000;
-        border-right: 1px solid #000;
-      }
+    /* エントリー */
+    .top__link--entry {
+      width: 174px;
+      height: 46px;
+      justify-content: center;
+      font-size: 24px;
+      margin-inline-end: 24px;
+      padding-inline: 48px;
 
-      /* ハンバーガー */
-      .hamburger {
-        width: 46px;
-        height: 46px;
-      }
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+    }
 
-      .hamburger span {
-        width: 30px;
-        height: 2px;
+    /* ハンバーガー */
+    .hamburger {
+      width: 46px;
+      height: 46px;
+      align-content: center;
+    }
 
-        background-color: #000;
-        display: block;
-      }
+    .hamburger span {
+      width: 30px;
+      height: 2px;
 
-      .hamburger span:nth-child(1) {
-        top: 0;
-      }
+      background-color: #000;
+      display: block;
+    }
 
-      .hamburger span:nth-child(2) {
-        margin: 8px 0;
-      }
+    .hamburger span:nth-child(1) {
+      top: 0;
+    }
 
-      .hamburger span:nth-child(3) {
-        top: 0;
-      }
-    </style>
-  </header>
+    .hamburger span:nth-child(2) {
+      margin: 8px 0;
+    }
 
-
-</html>
+    .hamburger span:nth-child(3) {
+      top: 0;
+    }
+  </style>
+</header>
