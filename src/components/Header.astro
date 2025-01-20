@@ -1,93 +1,170 @@
 <header class="header">
-  <!-- ロゴ -->
-  <h1 class="top__logo">
-    <img src="/images/top_logo.svg" alt="トップページロゴ" />
-  </h1>
-  <!-- エントリーリンクとハンバーガー -->
-  <div class="top__link--nav">
-    <div class="top__link--entry">
-      <a href="#">Entry</a>
-    </div>
+  <div class="g-nav">
+    <h1 class="top__logo">
+      <img src="public/images/top_logo.svg" alt="ロゴの画像" class="img-pc" />
+    </h1>
+    <img src="public/images/logo_sp.svg" alt="ロゴの画像" class="img-sp" />
+    <div class="nav__area">
+      <div class="top__link--entry">
+        <a href="#">Entry</a>
+      </div>
 
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <!-- ハンバーガーメニュー -->
+      <div class="header__hamburger">
+        <div class="header__hamburger--menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
   </div>
-
-  <style>
-    @charset "UTF-8";
-
-    body {
-      background-color: #e8e8e8;
-    }
-
-    ul {
-      list-style: none;
-    }
-    a {
-      color: #000;
-      text-decoration: none;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-inline: 40px;
-      margin-block-start: 14px;
-    }
-    /* ロゴ */
-    .top__logo {
-      width: 332.98px;
-      height: 30.78px;
-    }
-
-    /* エントリーリンクとハンバーガー */
-    .top__link--nav {
-      display: flex;
-      align-content: center;
-    }
-
-    /* エントリーリンク*/
-    .top__link--entry {
-      width: 174px;
-      height: 46px;
-      justify-content: center;
-      font-size: 24px;
-      font-family: 'Roboto', serif;
-      margin-inline-end: 24px;
-      padding-inline: 48px;
-      border-left: 1px solid #000;
-      border-right: 1px solid #000;
-    }
-
-    /* ハンバーガーメニュー */
-    .hamburger {
-      width: 46px;
-      height: 46px;
-      align-content: center;
-      justify-items: center;
-    }
-    /* ハンバーガーメニューの線 */
-    .hamburger span {
-      width: 30px;
-      height: 2px;
-      background-color: #000;
-      display: block;
-    }
-
-    .hamburger span:nth-child(1) {
-      top: 0;
-    }
-
-    .hamburger span:nth-child(2) {
-      margin: 8px 0;
-    }
-
-    .hamburger span:nth-child(3) {
-      top: 0;
-    }
-  </style>
 </header>
+
+<style>
+  @charset "UTF-8";
+
+  html {
+    font-family: 'Noto Sans JP', serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    background-color: #e8e8e8;
+  }
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .g-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-start: 14px;
+    margin-inline: 40px;
+  }
+  /* 
+  .top__logo {
+    max-width: 332.98px;
+  } */
+
+  .img-pc {
+    /* width: calc( 332.98/ 1280 * 100vw); */
+    width: 100%;
+  }
+
+  .nav__area {
+    display: flex;
+    height: 46px;
+  }
+
+  /* エントリーリンク */
+  .top__link--entry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 174px;
+    height: 46px;
+    font-size: 24px;
+    font-family: 'Roboto';
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    margin-inline-end: 24px;
+  }
+
+  .header__hamburger {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__hamburger--menu {
+    /* position: relative; spanの位置調整の基準になる */
+    width: 30px; /* ハンバーガーメニューの横幅 */
+    height: 22px; /* ハンバーガーメニューの高さ */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* 垂直方向に中央揃え */
+    cursor: pointer;
+    position: relative;
+    z-index: 200;
+  }
+
+  .header__hamburger--menu span {
+    width: 100%; /* メニュー全体の幅に合わせる */
+    height: 2px;
+    background-color: #000;
+  }
+
+  /* .header__hamburger--menu :hover{
+background-color: #E8E8E8;
+} */
+
+  .header__hamburger--menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 5px);
+    background-color: #fff;
+  }
+
+  .header__hamburger--menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__hamburger--menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -5px);
+    background-color: #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    .img-pc {
+      display: none;
+    }
+    /* .img-sp {
+      min-width: 175px;
+    } */
+    .g-nav {
+      margin-inline: 14px;
+      margin-block-start: 12px;
+    }
+
+    .top__logo {
+      top: 0;
+    }
+    .nav__area {
+      display: flex;
+      height: 46px;
+    }
+
+    .top__link--entry {
+      max-width: 80px;
+      height: 36px;
+      font-size: 15px;
+      margin-block: auto;
+    }
+
+    .header__hamburger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .header__hamburger--menu {
+      width: 24px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .img-sp {
+      display: none;
+    }
+  }
+</style>
