@@ -14,8 +14,8 @@
       <div class="hamburger__menu--nav">
         <h2 class="hamburger__logo">
           <img src="/images/hamburger_logo.svg" alt="ハンバーガーメニュー用ロゴ" class="img-pc" />
+          <img src="/images/hamburger_logosp.svg" alt="ハンバーガーメニュー用ロゴ" class="img-sp" />
         </h2>
-        <img src="/images/hamburger_logosp.svg" alt="ハンバーガーメニュー用ロゴ" class="img-sp" />
       </div>
       <div class="hamburger__link--entry">
         <a href="#" class="Btn">Entry</a>
@@ -44,18 +44,15 @@
         </div>
 
         <div class="accordion__member--system">
-          <div class="title__menber--area">
-            <a href="#">
-              <h2 class="accordion__title--menber">Member</h2>
-              <p>社員紹介</p>
-            </a>
-          </div>
-          <div class="title__system--area">
-            <a href="#">
-              <h2 class="accordion__title--system">Benefits System</h2>
-              <p>制度・福利厚生</p>
-            </a>
-          </div>
+          <a href="#" class="title__menber--area">
+            <h2 class="accordion__title--menber">Member</h2>
+            <p>社員紹介</p>
+          </a>
+
+          <a href="#" class="title__system--area">
+            <h2 class="accordion__title--system">Benefits System</h2>
+            <p>制度・福利厚生</p>
+          </a>
         </div>
       </div>
 
@@ -538,16 +535,22 @@
   @media screen and (max-width: 768px) {
     .img-pc {
       display: none;
-      background-image: url();
     }
 
+    .img-sp {
+      display: flex;
+    }
+
+    .hamburger__list--item2 {
+      display: block;
+    }
     .hamburger__link--entry {
       display: none;
     }
 
     .hamburger__menu {
       display: block;
-      height: 100%;
+      /* height: 100%; */
     }
 
     .hamburger__menu--list {
@@ -559,6 +562,7 @@
 
     .hamburger__menu--list {
       width: 312px;
+      display: block;
     }
 
     .accordion__position--area {
@@ -634,19 +638,137 @@
 
     /* ここまでポジション */
     /* ここから社員紹介 */
+
     .accordion__member--system {
       width: 312px;
-      height: 60px;
     }
+
     .title__menber--area {
       display: flex;
       width: 312px;
+      height: 60px;
+      /* border-bottom: 1px solid #484848; */
+      margin-block-end: 16px;
     }
+    .title__system--area {
+      display: flex;
+      width: 312px;
+      height: 60px;
+    }
+
     .accordion__title--menber {
       font-size: 28px;
+      width: 312px;
+      margin: inherit;
     }
     .title__menber--area p {
       font-size: 15px;
+      width: 312px;
+    }
+
+    .accordion__title--system {
+      font-size: 28px;
+      margin: inherit;
+    }
+    .title__system--area {
+      display: flex;
+      width: 312px;
+      height: 60px;
+      margin: inherit;
+      margin-block-end: 16px;
+    }
+
+    .title__system--area p {
+      font-size: 15px;
+    }
+
+    /* クロストーク */
+
+    .accordion__crosstalk--area {
+      width: 312px;
+      margin: inherit;
+      margin-block-end: 16px;
+    }
+    .rosstalk__list__link {
+      display: block;
+      width: 312px;
+    }
+
+    .accordion__title--area p {
+      font-size: 15px;
+      margin: inherit;
+    }
+
+    .accordion__title--crosstalk {
+      width: 106px;
+      font-size: 28px;
+    }
+
+    .crosstalk__icon {
+      display: none;
+    }
+
+    .sp__icon {
+      width: 28px;
+      height: 28px;
+      background-image: url(/images/plus_sp.svg);
+      /* background-repeat: no-repeat; */
+    }
+
+    .sp__icon.active {
+      width: 28px;
+      height: 28px;
+      background-image: url(/images/minus_sp.svg);
+      /* background-repeat: no-repeat; */
+    }
+
+    .crosstalk_list__item {
+      display: grid;
+      grid-template-columns: 1fr;
+      font-size: 15px;
+      margin-block-start: 32px;
+      gap: 29px;
+    }
+
+    /* データ */
+
+    accordion__data--area {
+      width: 312px;
+    }
+    .accordion__title--area p {
+      font-size: 15px;
+      margin: inherit;
+    }
+
+    .accordion__title--data {
+      width: 106px;
+      font-size: 28px;
+    }
+
+    .data_icon {
+      display: none;
+    }
+
+    .sp__icon {
+      width: 28px;
+      height: 28px;
+      background-image: url(/images/plus_sp.svg);
+      /* background-repeat: no-repeat; */
+    }
+
+    .sp__icon.active {
+      width: 28px;
+      height: 28px;
+      background-image: url(/images/minus_sp.svg);
+      /* background-repeat: no-repeat; */
+    }
+
+    .data_list__item {
+      display: grid;
+      grid-template-columns: 1fr;
+      font-size: 15px;
+      margin-block-start: 32px;
+      gap: 29px;
     }
   }
 

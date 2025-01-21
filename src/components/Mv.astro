@@ -1,0 +1,41 @@
+<main class="main">
+  <div class="mv__area">
+    <div class="mv__item">
+      <img src="public/images/display_text.svg" alt="" class="mv__displaytext" />
+      <img src="/images/tagline_text.svg" alt="" class="mv__tagline" />
+    </div>
+  </div>
+</main>
+
+<style>
+  .mv__area {
+    background-image: url(images/kv_bg_lg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    display: flex;
+    justify-content: center; /* 子要素を中央揃え */
+    height: 100vh; /* 全画面を覆う場合 */
+  }
+
+  .mv__item {
+    max-width: 1161px;
+    display: flex;
+    /* justify-content: center;子要素を中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    flex-direction: column; /* 子要素を縦方向に並べる場合 */
+    text-align: center; /* 中央揃えの補助 */
+    margin-block-start: 57px;
+  }
+
+  .mv__displaytext {
+    position: relative;
+  }
+
+  .mv__tagline {
+    max-width: 820.12px;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
