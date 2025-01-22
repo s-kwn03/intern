@@ -1,0 +1,128 @@
+<section class="section">
+  <div class="entry">
+    <div class="entry__area">
+      <div class="entry__post">
+        <div class="entry__btn">
+          <a href="#">エントリーはこちら</a>
+          <img src="/images/links_icon.svg" alt="サイトリンクアイコン" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  @charset "UTF-8";
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    /* color: #000; */
+    text-decoration: none;
+  }
+
+  .entry__area {
+    background-image: url(/images/entry_bgpc.png);
+    background-size: cover;
+    background-position: center;
+    /* max-width: 1280px; */
+    width: 100vw;
+    max-height: 320px;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: 80px;
+  }
+  .entry__post {
+    width: 100%;
+    max-width: 953px;
+    max-height: 320px;
+    height: 25vw;
+    background-image: url(/images/entry_textpc.svg);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .entry__title {
+    margin-block-end: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .entry__post p {
+    margin-block-end: 20px;
+    color: #fff;
+  }
+  .entry__btn {
+    position: relative;
+  }
+  .entry__btn img {
+    position: absolute;
+    top: 32px;
+    left: 632px;
+    width: 14px;
+    height: 14px;
+  }
+  .entry__btn a {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    width: 415px;
+    height: 73px;
+    align-items: center;
+    margin-inline: auto;
+    background: #000;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    .entry {
+      display: flex;
+      justify-content: center;
+    }
+
+    .entry__area {
+      background-image: url(/images/entry_bgsp.png);
+      width: 360px;
+      height: 357px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-block-end: 57px;
+    }
+
+    .entry__btn a {
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      width: 262px;
+      height: 55px;
+      align-items: center;
+      margin-inline: auto;
+      background: #000;
+      color: #fff;
+    }
+
+    .entry__post {
+      max-width: 100%;
+      width: 377px;
+      overflow: hidden;
+      max-height: 189px;
+      height: 40vw;
+      background-image: url(/images/entry_textsp.svg);
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      background-size: cover;
+      position: relative;
+    }
+  }
+</style>

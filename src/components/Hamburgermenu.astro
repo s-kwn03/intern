@@ -18,7 +18,7 @@
         </h2>
       </div>
       <div class="hamburger__link--entry">
-        <a href="#" class="Btn">Entry</a>
+        <a href="#" class="btn">Entry</a>
       </div>
     </div>
     <div class="hamburger__menu--list">
@@ -130,7 +130,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+
     display: none;
     /* overflow-y: hidden; */
   }
@@ -163,7 +163,7 @@
     color: #fff;
   }
 
-  .Btn:hover {
+  .btn:hover {
     width: 174px;
     border: 1px solid #fff;
     color: #000;
@@ -532,7 +532,8 @@
     gap: 10px;
   }
 
-  /*  ハンバーガーレスポンシブ @media screen and (max-width: 768px) {
+  /* ハンバーガーレスポンシブ  */
+  @media screen and (max-width: 768px) {
     .img-pc {
       display: none;
     }
@@ -546,21 +547,21 @@
     }
     .hamburger__link--entry {
       display: none;
-    } */
+    }
 
-  /* .hamburger__menu {
+    /* .hamburger__menu {
       display: block;
       height: 100%;
     } */
 
-  /* .hamburger__menu--list {
+    .hamburger__menu--list {
       display: block;
       justify-content: center;
-    } */
+    }
 
-  /* ポジション */
+    /* ポジション */
 
-  /* .hamburger__menu--list {
+    .hamburger__menu--list {
       width: 312px;
       display: block;
     }
@@ -604,14 +605,12 @@
       width: 28px;
       height: 28px;
       background-image: url(/images/plus_sp.svg);
-    
     }
 
     .sp__icon.active {
       width: 28px;
       height: 28px;
       background-image: url(/images/minus_sp.svg);
-
     }
 
     .position__list__item {
@@ -627,12 +626,12 @@
 
     .sp__link--entry {
       display: flex;
-    } */
+    }
 
-  /* ここまでポジション */
-  /* ここから社員紹介 */
+    /* ここまでポジション */
+    /* ここから社員紹介 */
 
-  /* .accordion__member--system {
+    .accordion__member--system {
       width: 312px;
     }
 
@@ -640,7 +639,7 @@
       display: flex;
       width: 312px;
       height: 60px;
-     
+
       margin-block-end: 16px;
     }
     .title__system--area {
@@ -657,9 +656,9 @@
     .title__menber--area p {
       font-size: 15px;
       width: 312px;
-    } */
+    }
 
-  /* .accordion__title--system {
+    .accordion__title--system {
       font-size: 28px;
       margin: inherit;
     }
@@ -673,11 +672,12 @@
 
     .title__system--area p {
       font-size: 15px;
-    } */
+    }
+    */
 
   /* クロストーク */
 
-  /* .accordion__crosstalk--area {
+  .accordion__crosstalk--area {
       width: 312px;
       margin: inherit;
       margin-block-end: 16px;
@@ -712,7 +712,6 @@
       width: 28px;
       height: 28px;
       background-image: url(/images/minus_sp.svg);
- 
     }
 
     .crosstalk_list__item {
@@ -721,11 +720,12 @@
       font-size: 15px;
       margin-block-start: 32px;
       gap: 29px;
-    } */
+    }
+    */
 
   /* データ */
 
-  /* .accordion__data--area {
+  .accordion__data--area {
       width: 312px;
     }
     .accordion__title--area p {
@@ -740,13 +740,11 @@
 
     .data_icon {
       display: none;
-    } */
-
-  /* .sp__icon {
+    }
+    */ .sp__icon {
       width: 28px;
       height: 28px;
       background-image: url(/images/plus_sp.svg);
-      
     }
 
     .sp__icon.active {
@@ -754,27 +752,25 @@
       height: 28px;
       background-image: url(/images/minus_sp.svg);
       background-repeat: no-repeat;
-    } */
+    }
 
-  /* .data_list__item {
+    .data_list__item {
       display: grid;
       grid-template-columns: 1fr;
       font-size: 15px;
       margin-block-start: 32px;
       gap: 29px;
     }
-  } */
-
-  /* @media screen and (min-width: 768px) {
+  }
+  */ @media screen and (min-width: 768px) {
     .img-sp {
       display: none;
-     
     }
 
     .sp__link--entry {
       display: none;
     }
-  } */
+  }
 </style>
 
 <script>
