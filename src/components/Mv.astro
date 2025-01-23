@@ -4,7 +4,7 @@
       <img src="/images/display_text.svg" alt="" class="mv__displaytext" />
       <img src="/images/tagline_text.svg" alt="" class="mv__tagline" />
       <img src="/images/display_textsp.svg" alt="" class="mv__displaytextsp" />
-      <img src="/images/tagline_textsp.svg" alt="" class="mv__displaytextsp" />
+      <img src="/images/tagline_textsp.svg" alt="" class="mv__taglinesp" />
     </div>
   </div>
 
@@ -23,6 +23,19 @@
     height: 100vh; /* 全画面を覆う場合 */
   }
 
+  @media screen and (max-width: 768px) {
+    .mv__area {
+      background-image: url(/images/kv_bg_sm.png);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
   .mv__item {
     max-width: 100vh;
     display: flex;
@@ -34,10 +47,38 @@
     top: 0;
   }
 
+  @media screen and (max-width: 768px) {
+    .mv__item {
+      /* max-width: 331px; */
+      display: flex;
+      align-items: center; /* 垂直方向の中央揃え */
+      flex-direction: column; /* 子要素を縦方向に並べる場合 */
+      text-align: center; /* 中央揃えの補助 */
+      /* margin-block-start: 57px; */
+      position: relative;
+      top: 0;
+    }
+  }
+
   .mv__displaytext {
     position: absolute;
-    width: 331px;
+    max-width: 1161px;
     top: 104px;
+  }
+
+  .mv__displaytextsp {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .mv__displaytext {
+      display: none;
+    }
+    .mv__displaytextsp {
+      display: block;
+      width: 192.7px;
+      height: 480px;
+    }
   }
 
   .mv__tagline {
@@ -48,12 +89,36 @@
     transform: translate(-50%, -50%);
   }
 
+  .mv__taglinesp {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .mv__tagline {
+      display: none;
+    }
+    .mv__taglinesp {
+      display: block;
+      width: 331px;
+      position: absolute;
+      top: 19%;
+    }
+  }
+
   /* スクロールダウンの位置 */
   .scroll {
     position: absolute;
     right: 38px;
     top: 50%;
     writing-mode: vertical-rl;
+  }
+  @media screen and (max-width: 768px) {
+    .scroll {
+      position: absolute;
+      right: 50%;
+      top: 75%;
+      writing-mode: horizontal-tb;
+    }
   }
   /* 線のアニメーション部分 */
   .scroll::before {
@@ -98,70 +163,6 @@
     100% {
       transform: scale(1, 0);
       transform-origin: 0 100%;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .mv__area {
-      background-image: url(/images/kv_bg_sm.png);
-      background-repeat: no-repeat;
-      background-position: top center;
-      background-size: cover;
-      display: flex;
-      justify-content: center; /* 子要素を中央揃え */
-      width: 100vw;
-      height: 100vh; /* 全画面を覆う場合 */
-    }
-
-    .mv__item {
-      /* max-width: 331px; */
-      display: flex;
-      align-items: center; /* 垂直方向の中央揃え */
-      flex-direction: column; /* 子要素を縦方向に並べる場合 */
-      text-align: center; /* 中央揃えの補助 */
-      margin-block-start: 57px;
-      position: relative;
-      top: 0;
-    }
-
-    .mv__displaytext {
-      display: none;
-    }
-    .mv__tagline {
-      display: none;
-    }
-
-    .scroll {
-      position: absolute;
-      right: 50%;
-      top: 75%;
-      writing-mode: horizontal-tb;
-    }
-
-    .mv__displaytextsp {
-      display: flex;
-      position: absolute;
-      width: 192.7px;
-      top: 50%;
-    }
-
-    .mv__displaytextsp {
-      display: flex;
-      width: 331px;
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .mv__displaytextsp {
-      display: none;
-    }
-
-    .mv__displaytextsp {
-      display: none;
     }
   }
 </style>
