@@ -3,8 +3,10 @@
     <div class="entry__area">
       <div class="entry__post">
         <div class="entry__btn">
-          <a href="#">エントリーはこちら</a>
-          <img src="/images/links_icon.svg" alt="サイトリンクアイコン" />
+          <a href="#"
+            >エントリーはこちら
+            <img src="/images/links_icon.svg" alt="サイトリンクアイコン" />
+          </a>
         </div>
       </div>
     </div>
@@ -26,7 +28,6 @@
     background-image: url(/images/entry_bgpc.png);
     background-size: cover;
     background-position: center;
-    /* max-width: 1280px; */
     width: 100vw;
     max-height: 320px;
     height: 25vw;
@@ -34,7 +35,18 @@
     justify-content: center;
     align-items: center;
     margin-block-end: 80px;
+    @media screen and (max-width: 768px) {
+      background-image: url(/images/entry_bgsp.png);
+      max-width: 360px;
+      max-height: 189px;
+      height: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-block-end: 57px;
+    }
   }
+
   .entry__post {
     width: 100%;
     max-width: 953px;
@@ -45,8 +57,15 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    background-size: cover;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+      width: 100vw;
+      margin-block: auto;
+      height: 189px;
+      background-image: url(/images/entry_textsp.svg);
+      margin-block-start: 19px;
+    }
   }
 
   .entry__title {
@@ -60,13 +79,9 @@
     margin-block-end: 20px;
     color: #fff;
   }
-  .entry__btn {
-    position: relative;
-  }
+
   .entry__btn img {
-    position: absolute;
-    top: 32px;
-    left: 632px;
+    /* position: absolute; */
     width: 14px;
     height: 14px;
   }
@@ -80,50 +95,19 @@
     margin-inline: auto;
     background: #000;
     color: #fff;
+    gap: 10px;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      width: 262px;
+      height: 55px;
+    }
   }
 
   @media screen and (max-width: 768px) {
     .entry {
       display: flex;
       justify-content: center;
-    }
-
-    .entry__area {
-      background-image: url(/images/entry_bgsp.png);
-      width: 360px;
-      max-height: 189px;
-      height: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-block-end: 57px;
-    }
-
-    .entry__btn a {
-      font-size: 16px;
-      display: flex;
-      justify-content: center;
-      width: 262px;
-      height: 55px;
-      align-items: center;
-      margin-inline: auto;
-      background: #000;
-      color: #fff;
-    }
-
-    .entry__post {
-      max-width: 100%;
-      width: 377px;
-      overflow: hidden;
-      height: 189px;
-      /* height: 40vw; */
-      background-image: url(/images/entry_textsp.svg);
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-      background-size: cover;
-      position: relative;
+      width: 100vw;
     }
   }
 </style>

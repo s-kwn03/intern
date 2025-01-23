@@ -1,0 +1,91 @@
+<section class="messeage__thinking--area">
+  <div class="black__thinking--area">
+    <h1>Thinking <br class="sp_br" />Reed!</h1>
+    <p class="thinking__subtitle">考え抜くことを、最大の価値に。</p>
+    <p class="thinking__description--area">
+      わたしたちアンティー・システムは、<br />
+      社会に少しだけ笑顔を増やす<br class="sp_br" />ソリューション開発を目指し、<br />
+      人間本来の課題である思考力を最大<br class="sp_br" />限発揮することで<br />
+      最適解を導きだしていきます。
+    </p>
+  </div>
+</section>
+
+<style>
+  .black-section-area {
+    margin-block: auto;
+  }
+
+  @media (max-width: 768px) {
+    .black-section {
+      width: 100vw;
+      height: 789px;
+    }
+  }
+  /* 13%: 左高さ670px / 894px = 約13%、87%で右高さを再現 */
+  .messeage__thinking--area {
+    width: 100vw;
+    height: 894px;
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    clip-path: polygon(0 13%, 100% 0, 100% 100%, 0 87%);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px) {
+      width: 100vw;
+      height: 789px;
+      /* padding: 30px; */
+      clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 80%);
+      margin-block: center;
+    }
+  }
+
+  h1 {
+    font-size: 96px;
+    font-weight: bold;
+    background: linear-gradient(96deg, #ff6174 0%, #be6cff 33%, #7cc8ff 76%, #4bf4b7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media (max-width: 768px) {
+      font-size: 48px;
+    }
+  }
+
+  .thinking__subtitle {
+    font-size: 32px;
+    background: linear-gradient(98deg, #ff6174 0%, #be6cff 33%, #7cc8ff 76%, #4bf4b7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-bottom: 30px;
+    width: 503px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      text-align: center;
+      width: 314px;
+    }
+  }
+
+  .thinking__description--area {
+    font-size: 24px;
+    line-height: 200%;
+    color: #fff;
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 240%;
+      white-space: nowrap;
+    }
+  }
+
+  .sp_br {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+</style>

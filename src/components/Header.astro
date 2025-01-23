@@ -3,7 +3,6 @@
     <h1 class="top__logo">
       <img src="public/images/top_logo.svg" alt="ロゴの画像" class="img-pc" />
     </h1>
-    <img src="public/images/logo_sp.svg" alt="ロゴの画像" class="img-sp" />
     <div class="nav__area">
       <div class="top__link--entry">
         <a href="#">Entry</a>
@@ -46,17 +45,19 @@
     align-items: center;
     margin-block-start: 14px;
     margin-inline: 40px;
-    /* position: fixed;
-    top: 0px; */
+
+    @media screen and (max-width: 768px) {
+      margin-inline: 14px;
+      margin-block-start: 12px;
+    }
   }
-  /* 
-  .top__logo {
-    max-width: 332.98px;
-  } */
 
   .img-pc {
-    /* width: calc( 332.98/ 1280 * 100vw); */
-    width: 100%;
+    width: calc(332.98 / 1280 * 100vw);
+
+    @media screen and (max-width: 768px) {
+      width: calc(175px / 1280 * 100vw);
+    }
   }
 
   .nav__area {
@@ -65,17 +66,22 @@
   }
 
   /* エントリーリンク */
-  /* エントリーリンク */
   .top__link--entry {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 174px;
     height: 46px;
-
     border-left: 1px solid #000;
     border-right: 1px solid #000;
     margin-inline-end: 24px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 80px;
+      height: 36px;
+      font-size: 15px;
+      margin-block: auto;
+    }
   }
 
   .top__link--entry a {
@@ -90,6 +96,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* 
+    @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
   }
 
   .header__hamburger--menu {
@@ -102,13 +114,16 @@
     cursor: pointer;
     position: relative;
     z-index: 200;
+    @media screen and (max-width: 768px) {
+      width: 24px;
+    }
   }
 
   .header__hamburger--menu span {
     width: 100%; /* メニュー全体の幅に合わせる */
     height: 2px;
     background-color: #000;
-    z-index: 300;
+    /* z-index: 300; */
   }
 
   /* .header__hamburger--menu :hover{
@@ -127,49 +142,5 @@ background-color: #E8E8E8;
   .header__hamburger--menu.active span:nth-child(3) {
     transform: rotate(-45deg) translate(10px, -5px);
     background-color: #fff;
-  }
-
-  @media screen and (max-width: 768px) {
-    .img-pc {
-      display: none;
-    }
-    /* .img-sp {
-      min-width: 175px;
-    } */
-    .g-nav {
-      margin-inline: 14px;
-      margin-block-start: 12px;
-    }
-
-    .top__logo {
-      top: 0;
-    }
-    .nav__area {
-      display: flex;
-      height: 46px;
-    }
-
-    .top__link--entry {
-      max-width: 80px;
-      height: 36px;
-      font-size: 15px;
-      margin-block: auto;
-    }
-
-    .header__hamburger {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .header__hamburger--menu {
-      width: 24px;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .img-sp {
-      display: none;
-    }
   }
 </style>
