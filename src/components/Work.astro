@@ -10,7 +10,7 @@
         <img src="/images/deta_icon.svg" alt="" class="data__icon" />
       </a>
     </div>
-    <div class="work__area--left">
+    <div class="work__area--right">
       <p class="work__sub--title">実績紹介</p>
       <div class="work__title">
         <img src="/images/title_workpc.svg" alt="" />
@@ -45,6 +45,15 @@
     position: relative;
   }
 
+  @media screen and (max-width: 768px) {
+    .data__work--area {
+      display: block;
+      background: none;
+      max-height: 427px;
+      text-align: center;
+    }
+  }
+
   .data__area--left {
     width: 50%;
     display: flex;
@@ -55,13 +64,37 @@
     border-bottom: 1px solid ##9c9c9c;
   }
 
-  .work__area--left {
+  @media screen and (max-width: 768px) {
+    .data__area--left {
+      width: 100%;
+      padding: 50px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      width: 100vw;
+    }
+  }
+
+  .work__area--right {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .work__area--right {
+      width: 100%;
+      padding: 50px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+      width: 100vw;
+    }
   }
 
   .data__sub--title {
