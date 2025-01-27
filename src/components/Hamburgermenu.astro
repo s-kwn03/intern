@@ -334,7 +334,8 @@
     @media screen and (max-width: 768px) {
       display: block;
       margin-inline-start: 18px;
-      margin-inline-end: 81px;
+      /* margin-inline-end: 81px; */
+      white-space: nowrap;
     }
   }
 
@@ -381,13 +382,6 @@
     }
   }
 
-  .position__list__item a {
-    color: #fff;
-    @media screen and (max-width: 768px) {
-      padding-left: 20px;
-    }
-  }
-
   .position__list__item li:nth-child(1) {
     @media screen and (max-width: 768px) {
       margin-block-end: 29px;
@@ -403,7 +397,7 @@
   .list__arrow {
     position: relative;
     /* display: inline-block; */
-    padding-left: 20px;
+    /* padding-left: 20px; */
   }
 
   .list__arrow:before {
@@ -510,18 +504,18 @@ font-size: 16px;
       width: 312px;
       /* justify-content: start; */
       height: 60px;
+      white-space: nowrap;
     }
   }
 
-  /* .accordion__icon--area {
-	width: 28px;
-	height: 28px;
-
-} */
+  .accordion__icon--area {
+    width: 28px;
+    height: 28px;
+  }
 
   .crosstalk__icon {
-    width: 100%;
-    height: 100%;
+    width: 28px;
+    height: 28px;
     background-image: url(images/plus.svg);
     background-repeat: no-repeat;
     background-size: contain; /* コンテナ内に収める */
