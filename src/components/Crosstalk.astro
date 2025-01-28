@@ -8,43 +8,30 @@
     <div class="crosstalk__area--item">
       <div class="crosstalk__new">
         <p class="crosstalk__number1">01</p>
-        <img src="images/crosstalk_img.svg" alt="" />
+        <div class="crosstalk__img--area">
+          <img src="images/crosstalk_img.jpg" alt="" />
+        </div>
 
         <div class="dec__area">
           <p>入社1～2年目の社員</p>
-          <a href=""><img src="images/crosstalk_btn64.svg" alt="" /></a>
+          <div>
+            <a href=""><img src="images/crosstalk_btn64.svg" alt="" /></a>
+          </div>
         </div>
       </div>
 
       <div class="crosstalk__parents">
         <p class="crosstalk__number2">02</p>
-        <img src="images/crosstalk_ppmmimg.svg" alt="" />
+        <div class="crosstalk__img--area">
+          <img src="images/crosstalk_ppmmimg.jpg" alt="" />
+        </div>
 
         <div class="dec__area">
           <p>働くパパママ</p>
-          <a href=""><img src="images/crosstalk_btn64.svg" alt="" /></a>
-        </div>
-      </div>
-    </div>
 
-    <div class="crosstalk__area--item">
-      <div class="crosstalk__new">
-        <p class="crosstalk__number1">01</p>
-        <img src="images/crosstalk_img.svg" alt="" />
-
-        <div class="dec__area">
-          <p>入社1～2年目の社員</p>
-          <a href=""><img src="images/crosstalk_btn64.svg" alt="" /></a>
-        </div>
-      </div>
-
-      <div class="crosstalk__parents">
-        <p class="crosstalk__number2">02</p>
-        <img src="images/crosstalk_ppmmimg.svg" alt="" />
-
-        <div class="dec__area">
-          <p>働くパパママ</p>
-          <a href=""><img src="images/crosstalk_btn64.svg" alt="" /></a>
+          <div>
+            <a href=""><img src="images/crosstalk_btn64.svg" alt="" /></a>
+          </div>
         </div>
       </div>
     </div>
@@ -70,6 +57,7 @@
       max-width: 340px;
       display: block;
       justify-content: center;
+      margin-block-end: 90px;
     }
   }
 
@@ -98,8 +86,8 @@
       color: #fff;
       font-size: 14px;
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 4%;
+      left: 43%;
     }
   }
 
@@ -109,8 +97,10 @@
     align-items: center;
     width: 100vw;
     z-index: 100;
-    position: absolute;
+    /* position: absolute; */
+    margin-block-start: -20px;
     top: 85%;
+
     @media screen and (max-width: 768px) {
       display: block;
       width: 100vw;
@@ -123,10 +113,13 @@
     font-size: 90px;
     font-weight: bold;
     color: #696969;
-    z-index: 500;
+    z-index: 200;
     position: absolute;
     left: 2%;
-    top: -10%;
+    top: 14%;
+    @media screen and (max-width: 768px) {
+      font-size: 72px;
+    }
   }
 
   .crosstalk__number2 {
@@ -134,13 +127,14 @@
     font-size: 90px;
     font-weight: bold;
     color: #696969;
-    z-index: 500;
+    z-index: 200;
     position: absolute;
     left: 52%;
-    top: -10%;
+    top: 14%;
     @media screen and (max-width: 768px) {
       left: 2%;
-      top: 47%;
+      top: 57%;
+      font-size: 72px;
     }
   }
   .crosstalk__new {
@@ -151,38 +145,67 @@
       margin-block-end: 72px;
     }
   }
+  /* 
+  .crosstalk__img--area img {
+    height: 320px;
+  } */
 
   .crosstalk__new img {
     position: relative;
+    /* width: 640px; */
     width: 50vw;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    /* object-fit: contain; */
     vertical-align: bottom;
+    overflow: hidden;
     @media screen and (max-width: 768px) {
       width: 100vw;
     }
   }
 
+  .crosstalk__new img:hover {
+    transform: scale(1.1); /* 拡大 */
+  }
+
+  .crosstalk__parents {
+    width: 50vw;
+
+    @media screen and (max-width: 768px) {
+      width: 100vw;
+      margin-block-end: 72px;
+    }
+  }
   .crosstalk__parents img {
     width: 50vw;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    /* object-fit: contain; */
     vertical-align: bottom;
+    overflow: hidden;
     @media screen and (max-width: 768px) {
       width: 100vw;
     }
   }
 
+  .crosstalk__parents img:hover {
+    transform: scale(1.1); /* 拡大 */
+  }
   .dec__area {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    border-left: 1px solid #000;
+
+    border-bottom: 4px solid;
+    border-image: linear-gradient(to right, #ff6174, #be6cff, #7cc8ff, #4bf4b7) 1;
   }
   .dec__area p {
     font-size: 24px;
     margin-inline-start: 32px;
   }
+
   .dec__area img {
     width: 64px;
     padding-inline-end: 16px;

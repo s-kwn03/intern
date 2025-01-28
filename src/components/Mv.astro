@@ -43,7 +43,7 @@
     position: absolute;
     max-width: 1161px;
     width: calc(636 / 1280 * 100vw);
-    top: 104px;
+    top: 137px;
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -63,8 +63,9 @@
     max-width: 820.12px;
     width: 100vw;
     position: absolute;
-    top: 32%;
+    top: 178px;
     left: 50%;
+    margin-block-start: 178px;
     transform: translate(-50%, -50%);
 
     @media screen and (max-width: 768px) {
@@ -82,10 +83,11 @@
     }
   }
 
+  /* ---- */
   /* スクロールダウンの位置 */
   .scroll {
     position: absolute;
-    right: 38px;
+    right: 60px;
     top: 50%;
     writing-mode: vertical-rl;
     @media screen and (max-width: 768px) {
@@ -95,27 +97,26 @@
       writing-mode: horizontal-tb;
     }
   }
-
   /* 線のアニメーション部分 */
   .scroll::before {
     animation: scroll 2s infinite;
     background-color: #000;
     bottom: -50px;
     content: '';
-    height: 40px;
+    height: 42px;
     left: 0;
     margin: auto;
     position: absolute;
     right: 0;
     width: 1px;
-    /* z-index: 2; */
+    z-index: 2;
   }
   /* 線の背景色 */
   .scroll::after {
     background-color: #ccc;
     bottom: -50px;
     content: '';
-    height: 40px;
+    height: 42px;
     left: 0;
     margin: auto;
     position: absolute;
