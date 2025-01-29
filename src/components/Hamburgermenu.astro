@@ -132,9 +132,9 @@
 </div>
 
 <style>
-  body {
+  /* body {
     background-color: #000;
-  }
+  } */
   ul {
     list-style: none;
   }
@@ -160,7 +160,6 @@
     width: 100vw;
     position: fixed;
     z-index: 1000;
-    width: 100vw;
   }
 
   .hamburger--gnav {
@@ -211,22 +210,23 @@
     color: #fff;
     font-size: 24px;
     font-family: 'Roboto';
-    @media screen and (max-width: 768px) {
-      font-size: 15px;
-      font-family: 'Roboto';
-    }
-  }
-
-  .btn {
     width: 174px;
     height: 46px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Roboto';
     @media screen and (max-width: 768px) {
-      /* width: 312px; */
+      font-size: 15px;
     }
   }
+
+  /* .btn {
+    
+    @media screen and (max-width: 768px) {
+    width: 312px;
+    }
+  } */
 
   .btn:hover {
     /* border: 1px solid #fff; */
@@ -259,7 +259,7 @@
     background-color: #fff;
   }
 
-  .header__hamburger--menu.active span:nth-child(1) {
+  .header__hamburger--menu span:nth-child(1) {
     transform: rotate(45deg) translate(10px, 5px);
     background-color: #fff;
     @media screen and (max-width: 768px) {
@@ -267,11 +267,11 @@
     }
   }
 
-  .header__hamburger--menu.active span:nth-child(2) {
+  .header__hamburger--menu span:nth-child(2) {
     opacity: 0;
   }
 
-  .header__hamburger--menu.active span:nth-child(3) {
+  .header__hamburger--menu span:nth-child(3) {
     transform: rotate(-45deg) translate(10px, -5px);
     background-color: #fff;
     @media screen and (max-width: 768px) {
