@@ -116,9 +116,10 @@
     z-index: 200;
     position: absolute;
     left: 2%;
-    top: 14%;
+    top: 12%;
     @media screen and (max-width: 768px) {
       font-size: 72px;
+      top: 10%;
     }
   }
 
@@ -130,35 +131,31 @@
     z-index: 200;
     position: absolute;
     left: 52%;
-    top: 14%;
+    top: 12%;
     @media screen and (max-width: 768px) {
       left: 2%;
-      top: 57%;
+      top: 56%;
       font-size: 72px;
     }
   }
   .crosstalk__new {
     width: 50vw;
-
+    overflow: hidden;
     @media screen and (max-width: 768px) {
       width: 100vw;
       margin-block-end: 72px;
     }
   }
-  /* 
-  .crosstalk__img--area img {
-    height: 320px;
-  } */
 
   .crosstalk__new img {
     position: relative;
     /* width: 640px; */
     width: 50vw;
     height: 100%;
-    object-fit: cover;
-    /* object-fit: contain; */
+    /* object-fit: cover; */
+    object-fit: contain;
     vertical-align: bottom;
-    overflow: hidden;
+
     @media screen and (max-width: 768px) {
       width: 100vw;
     }
@@ -170,7 +167,7 @@
 
   .crosstalk__parents {
     width: 50vw;
-
+    overflow: hidden;
     @media screen and (max-width: 768px) {
       width: 100vw;
       margin-block-end: 72px;
@@ -204,6 +201,9 @@
   .dec__area p {
     font-size: 24px;
     margin-inline-start: 32px;
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   .dec__area img {

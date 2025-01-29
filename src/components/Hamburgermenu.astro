@@ -5,7 +5,7 @@
     <div class="hamburger--gnav">
       <div class="hamburger__logo--area">
         <h1 class="hamburger__logo">
-          <img src="images/burger_logo.svg" alt="" />
+          <img src="/images/hamburger_logo.svg" alt="" />
         </h1>
       </div>
 
@@ -135,6 +135,7 @@
   /* body {
     background-color: #000;
   } */
+
   ul {
     list-style: none;
   }
@@ -143,7 +144,11 @@
     /* color: #000; */
     text-decoration: none;
   }
-  .header__hamburger--menu.active {
+  a:hover {
+    opacity: 0.7;
+  }
+
+  .header__hamburger--menu {
     display: block;
   }
 
@@ -216,6 +221,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'Roboto';
+
     @media screen and (max-width: 768px) {
       font-size: 15px;
     }
@@ -228,7 +234,7 @@
     }
   } */
 
-  .btn:hover {
+  .hamburger__link--entry a:hover {
     /* border: 1px solid #fff; */
     color: #000;
     background: #fff;
@@ -859,7 +865,7 @@ height: 28px;
     align-items: center;
   }
 
-  .sp__btn:hover {
+  .sp__btn a:hover {
     color: #000;
     background: #fff;
     opacity: 1;

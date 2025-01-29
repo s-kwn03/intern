@@ -7,19 +7,22 @@
           <h1 class="footer__logo">
             <img src="images/footerlogo.svg" alt="" />
           </h1>
-          <div class="bottan__area">
-            <a href="#" class="button">Official Site </a>
-            <img src="images/links_icon.svg" alt="" />
+          <div class="btn__area">
+            <div class="bottan__area">
+              <a href="#" class="btn">Official Site </a>
+              <img src="images/links_icon.svg" alt="" />
+            </div>
           </div>
+
           <div class="social-icons">
             <div>
-              <a href="#"><img src="images/x_logo.png" alt="" /></a>
+              <a href="#"><img src="images/x_logo.svg" alt="" /></a>
             </div>
             <div>
-              <a href="#"><img src="images/instagram_logo.png" alt="" /></a>
+              <a href="#"><img src="images/instagram_logo.svg" alt="" /></a>
             </div>
             <div>
-              <a href="#"><img src="images/note_logo.png" alt="" /></a>
+              <a href="#"><img src="images/note_logo.svg" alt="" /></a>
             </div>
           </div>
         </div>
@@ -42,7 +45,7 @@
           </div>
           <div class="system__area">
             <div class="system__title--area">
-              <h2>Benefits <br /> System</h2>
+              <a href=""><h2>Benefits <br /> System</h2></a>
               <p>制度・福利厚生</p>
             </div>
           </div>
@@ -65,8 +68,10 @@
         <div class="footer__right">
           <div class="member__area">
             <div class="member__title--area">
-              <h2>Member</h2>
-              <p>社員紹介</p>
+              <a href=""
+                ><h2>Member</h2>
+                <p>社員紹介</p></a
+              >
             </div>
           </div>
 
@@ -103,111 +108,6 @@
   </div>
 </footer>
 
-<!-- スマホ版 -->
-
-<div class="hamburger__menu--area">
-  <div class="hamburger__menu--list">
-    <div class="hamburger__list--left">
-      <!-- ポジション -->
-      <div class="accordion__position--area">
-        <div class="accordion__title--area">
-          <div class="title__position">
-            <h2 class="accordion__title">Position</h2>
-            <p class="sp__subtitle">ポジション</p>
-            <div class="accordion__icon--area">
-              <div class="accordion__icon"></div>
-            </div>
-          </div>
-          <p class="pc__subtitle">ポジション</p>
-        </div>
-
-        <div class="position__list__link">
-          <ul class="position__list__item">
-            <li class="list__arrow"><a href="#">企画営業</a></li>
-            <li class="list__arrow"><a href="#">企画・制作</a></li>
-            <li class="list__arrow"><a href="#">エンジニア</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- ポジション -->
-
-      <div class="accordion__member--system">
-        <a href="#"
-          ><div class="menber__area">
-            <h2 class="item__title">Member</h2>
-            <p>社員紹介</p>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="bs__area">
-            <h2 class="item__title">Benefits <br class="br__sp" /> System</h2>
-            <p>制度・福利厚生</p>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- 左終わり	右始まり -->
-    <div class="hamburger__list--right">
-      <!-- クロストーク -->
-      <div class="accordion__crosstalk--area">
-        <div class="accordion__title--area">
-          <div class="title__crosstalk">
-            <h2 class="accordion__title">Cross talk</h2>
-            <p class="sp__subtitle">座談会</p>
-            <div class="accordion__icon--area">
-              <div class="crosstalk__icon"></div>
-            </div>
-          </div>
-
-          <p class="pc__subtitle">座談会</p>
-        </div>
-
-        <div class="crosstalk__list__link">
-          <ul class="crosstalk__list__item">
-            <li class="list__arrow"><a href="#">入社1～2年目の社員</a></li>
-            <li class="list__arrow"><a href="#">働くパパママ社員</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="accordion__data--area">
-        <div class="accordion__title--area">
-          <div class="title__data">
-            <h2 class="accordion__title">Data</h2>
-            <p class="sp__subtitle">データ</p>
-            <div class="accordion__icon--area">
-              <div class="data__icon"></div>
-            </div>
-          </div>
-
-          <p class="pc__subtitle">データ</p>
-        </div>
-
-        <div class="data__list__link">
-          <ul class="data__list__item">
-            <li class="list__arrow"><a href="#">数字で見る SAMPLESAMPLE</a></li>
-            <li class="list__arrow"><a href="#">Q&A</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="link__site--area">
-        <div class="link__site">
-          <p><a href="#">Official Site</a></p>
-          <img src="images/links_icon.svg" alt="" />
-        </div>
-      </div>
-
-      <div>
-        <div class="link__entry--sp">
-          <a href="#" class="sp__btn">Entry</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <style>
   /* 全体設定 */
   ul {
@@ -217,6 +117,19 @@
     text-decoration: none;
     color: #fff;
   }
+
+  @media screen and (min-width: 768px) {
+    .hamburger__menu--area {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .section__footer {
+      display: none;
+    }
+  }
+
   footer {
     background-color: #000;
     width: 100vw;
@@ -225,6 +138,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  a:hover {
+    opacity: 0.7;
+  }
+  footer h2 {
+    font-family: 'Roboto';
+  }
+  footer p {
   }
 
   .footer__left {
@@ -244,7 +165,15 @@
   }
   .footer__logo {
     margin-block-end: 66px;
+    margin-block-start: -40px;
   }
+
+  .btn__area a:hover {
+    color: #000;
+    background: #fff;
+    opacity: 1;
+  }
+
   .bottan__area {
     width: 267px;
     height: 54px;
@@ -255,11 +184,20 @@
     gap: 54px;
     margin-block-end: 201px;
   }
+
   .bottan__area a {
     color: #fff;
+
     font-size: 18px;
     text-decoration: none;
+    font-family: 'Roboto';
   }
+  .bottan__area a:hover {
+    color: #000;
+    background: #fff;
+    opacity: 1;
+  }
+
   .social-icons {
     gap: 12px;
     display: flex;
@@ -299,6 +237,7 @@
     font-size: 28px;
     margin-inline-end: 18px;
     color: #fff;
+    font-family: 'Roboto';
   }
   .menu__title--area p {
     font-size: 15px;
@@ -317,6 +256,7 @@
   }
   .list__arrow {
     position: relative;
+    padding-left: 20px;
     /* display: inline-block; */
   }
   .list__arrow:before {
@@ -337,6 +277,7 @@
     display: flex;
     margin-block: auto;
     padding: 0;
+    font-family: 'Roboto';
   }
   .system__area {
     height: 96px;
@@ -350,9 +291,12 @@
     color: #fff;
     gap: 18px;
   }
-
+  .system__title--area h2 {
+    font-size: 28px;
+  }
   .system__title--area p {
-    margin-block-start: 5px;
+    margin-block-start: 10px;
+    font-size: 15px;
   }
   .data__title--area {
     display: flex;
@@ -364,6 +308,10 @@
 
   .data__title--area h2 {
     font-size: 28px;
+  }
+
+  .data__title--area p {
+    font-size: 15px;
   }
 
   .data__area {
@@ -399,6 +347,12 @@
     /* margin-block-start: 24px; */
   }
 
+  .member__title--area h2 {
+    font-size: 28px;
+  }
+  .member__title--area p {
+    font-size: 15px;
+  }
   .crosstalk__title--area {
     display: flex;
     color: #fff;
@@ -409,6 +363,10 @@
 
   .crosstalk__title--area h2 {
     font-size: 28px;
+  }
+
+  .crosstalk__title--area p {
+    font-size: 15px;
   }
 
   .crosstalk__area {
@@ -437,655 +395,9 @@
     margin-inline-end: 20px;
   }
 
-  /* フッター */
-
-  @media screen and (min-width: 768px) {
-    .hamburger__menu--area {
-      display: none;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .section__footer {
-      display: none;
-    }
-
-    .hamburger__menu--area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      @media screen and (max-width: 768px) {
-        align-items: start;
-        margin-block-start: 40px;
-      }
-    }
-    .hamburger__menu--list {
-      display: flex;
-      gap: 80px;
-      width: 960px;
-      color: #fff;
-      @media screen and (max-width: 768px) {
-        font-size: 28px;
-        width: 314px;
-        display: block;
-      }
-    }
-
-    .hamburger__menu--list a {
-      color: #fff;
-    }
-
-    .hamburger__list--left {
-      width: 440px;
-    }
-
-    /* ポジション */
-
-    .accordion__position--area {
-      width: 440px;
-      /* height: 180px; */
-      border-bottom: 1px solid #484848;
-      cursor: pointer;
-      padding-block-end: 24px;
-
-      @media screen and (max-width: 768px) {
-        width: 312px;
-        padding: 0;
-        border-top: 1px solid #484848;
-      }
-    }
-
-    .accordion__title--area.active {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .accordion__title--area {
-      position: relative;
-      width: 440px;
-
-      @media screen and (max-width: 768px) {
-        width: 312px;
-        justify-content: start;
-      }
-    }
-
-    .accordion__title--area p {
-      font-size: 16px;
-    }
-
-    .title__position {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%; /* 親要素の幅を確保 */
-
-      @media screen and (max-width: 768px) {
-        width: 312px;
-        /* justify-content: start; */
-        height: 60px;
-      }
-    }
-
-    .accordion__icon--area {
-      width: 28px;
-      height: 28px;
-    }
-
-    .accordion__icon {
-      width: 100%;
-      height: 100%;
-      background-image: url(images/plus.svg);
-      background-repeat: no-repeat;
-      background-size: contain; /* コンテナ内に収める */
-      background-position: center;
-    }
-
-    .accordion__icon.active {
-      width: 100%;
-      height: 100%;
-      background-image: url(images/minus.svg);
-      background-repeat: no-repeat;
-      background-size: contain; /* コンテナ内に収める */
-      background-position: center;
-    }
-    .accordion__title {
-      font-size: 48px;
-      font-family: 'Roboto';
-      font-weight: bold;
-      color: #fff;
-
-      @media screen and (max-width: 768px) {
-        font-size: 28px;
-      }
-    }
-
-    .sp__subtitle {
-      display: none;
-      color: #fff;
-      @media screen and (max-width: 768px) {
-        display: block;
-        margin-inline-start: 18px;
-        margin-inline-end: 81px;
-      }
-    }
-
-    .pc__subtitle {
-      color: #fff;
-      font-size: 16px;
-      margin-block-start: 12px;
-
-      @media screen and (max-width: 768px) {
-        display: none;
-      }
-    }
-
-    .position__list__link {
-      display: none;
-
-      @media screen and (max-width: 768px) {
-        margin-block-start: 26.5px;
-        margin-block-end: 30.5px;
-      }
-    }
-
-    .position__list__link.active {
-      display: flex;
-      margin-block-start: 38.5px;
-      @media screen and (max-width: 768px) {
-        margin-block-start: 26.5px;
-      }
-    }
-
-    .position__list__item {
-      display: flex;
-      gap: 24px;
-      @media screen and (max-width: 768px) {
-        display: block;
-        font-size: 15px;
-      }
-    }
-
-    .position__list__item a {
-      color: #fff;
-      @media screen and (max-width: 768px) {
-        gap: 29px;
-      }
-    }
-
-    .position__list__item a {
-      color: #fff;
-      @media screen and (max-width: 768px) {
-        padding-left: 20px;
-      }
-    }
-
-    .position__list__item li:nth-child(1) {
-      @media screen and (max-width: 768px) {
-        margin-block-end: 29px;
-      }
-    }
-
-    .position__list__item li:nth-child(2) {
-      @media screen and (max-width: 768px) {
-        margin-block-end: 29px;
-      }
-    }
-
-    .list__arrow {
-      position: relative;
-      /* display: inline-block; */
-      padding-left: 20px;
-    }
-
-    .list__arrow:before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border: 0;
-      border-top: solid 1px #fff;
-      border-right: solid 1px #fff;
-      transform: rotate(45deg);
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      margin: auto;
-    }
-
-    /* ポジション終わり */
-
-    .item__title {
-      font-size: 48px;
-      font-family: 'Roboto';
-      font-weight: bold;
-      color: #fff;
-      margin-block-start: 12px;
-
-      @media screen and (max-width: 768px) {
-        font-size: 28px;
-      }
-    }
-
-    .menber__area {
-      height: 112px;
-      border-bottom: 1px solid #484848;
-      @media screen and (max-width: 768px) {
-        height: 60px;
-        width: 312px;
-        display: flex;
-        /* margin-block: auto; */
-        align-items: center;
-        gap: 18px;
-        font-size: 15px;
-      }
-    }
-
-    /* .accordion__member--system p {
-font-size: 16px;
-
-
-} */
-
-    .bs__area {
-      height: 112px;
-      border-bottom: 1px solid #484848;
-      @media screen and (max-width: 768px) {
-        font-size: 15px;
-        height: 88px;
-        width: 312px;
-        display: flex;
-        /* margin-block: auto; */
-        align-items: center;
-        gap: 18px;
-        border-bottom: 1px solid #484848;
-      }
-    }
-
-    .br__sp {
-      display: none;
-      @media screen and (max-width: 768px) {
-        display: flex;
-      }
-    }
-    /* 左側	終わり */
-
-    /* クロストーク */
-
-    .accordion__crosstalk--area {
-      width: 440px;
-      /* height: 180px; */
-      border-bottom: 1px solid #484848;
-      cursor: pointer;
-      padding-block-end: 24px;
-
-      @media screen and (max-width: 768px) {
-        width: 312px;
-        padding: 0;
-        border-top: 1px solid #484848;
-      }
-    }
-
-    .accordion__crosstalk--area.active {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .title__crosstalk {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%; /* 親要素の幅を確保 */
-
-      @media screen and (max-width: 768px) {
-        width: 312px;
-        /* justify-content: start; */
-        height: 60px;
-      }
-    }
-
-    /* .accordion__icon--area {
-	width: 28px;
-	height: 28px;
-
-} */
-
-    .crosstalk__icon {
-      width: 100%;
-      height: 100%;
-      background-image: url(images/plus.svg);
-      background-repeat: no-repeat;
-      background-size: contain; /* コンテナ内に収める */
-      background-position: center;
-    }
-
-    .crosstalk__icon.active {
-      width: 100%;
-      height: 100%;
-      background-image: url(images/minus.svg);
-      background-repeat: no-repeat;
-      background-size: contain; /* コンテナ内に収める */
-      background-position: center;
-    }
-    .accordion__title {
-      font-size: 48px;
-      font-family: 'Roboto';
-      font-weight: bold;
-      color: #fff;
-
-      @media screen and (max-width: 768px) {
-        font-size: 28px;
-      }
-    }
-
-    .sp__subtitle {
-      display: none;
-      color: #fff;
-      @media screen and (max-width: 768px) {
-        display: block;
-        margin-inline-start: 18px;
-        margin-inline-end: 81px;
-      }
-    }
-
-    .pc__subtitle {
-      color: #fff;
-      font-size: 16px;
-      margin-block-start: 12px;
-
-      @media screen and (max-width: 768px) {
-        display: none;
-      }
-    }
-
-    .crosstalk__list__link {
-      display: none;
-
-      @media screen and (max-width: 768px) {
-        margin-block-start: 26.5px;
-        margin-block-end: 30.5px;
-      }
-    }
-
-    .crosstalk__list__link.active {
-      display: flex;
-      margin-block-start: 38.5px;
-      @media screen and (max-width: 768px) {
-        margin-block-start: 26.5px;
-      }
-    }
-
-    .crosstalk__list__item {
-      display: flex;
-      gap: 24px;
-      @media screen and (max-width: 768px) {
-        display: block;
-        font-size: 15px;
-      }
-    }
-    /* 
-.crosstalk__list__item a {
-  color: #fff;
-  @media screen and  (max-width:768px){
-	gap: 29px;
-  }
-} */
-
-    /* .position__list__item a {
-  color: #fff;
-  @media screen and  (max-width:768px){
-	 padding-left: 20px;
-  
-  } 
-} */
-
-    .crosstalk__list__item li:nth-child(1) {
-      @media screen and (max-width: 768px) {
-        margin-block-end: 29px;
-      }
-    }
-
-    .list__arrow {
-      position: relative;
-      /* display: inline-block; */
-      padding-left: 20px;
-    }
-
-    .list__arrow:before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border: 0;
-      border-top: solid 1px #fff;
-      border-right: solid 1px #fff;
-      transform: rotate(45deg);
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      margin: auto;
-    }
-
-    /* データ */
-
-    .accordion__data--area {
-      width: 440px;
-      /* height: 180px; */
-      border-bottom: 1px solid #484848;
-      cursor: pointer;
-      padding-block-end: 24px;
-
-      @media screen and (max-width: 768px) {
-        width: 312px;
-        padding: 0;
-        border-top: 1px solid #484848;
-      }
-    }
-
-    .accordion__data--area.active {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .title__data {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%; /* 親要素の幅を確保 */
-
-      @media screen and (max-width: 768px) {
-        width: 312px;
-        /* justify-content: start; */
-        height: 60px;
-      }
-    }
-
-    /* .accordion__icon--area {
-	width: 28px;
-	height: 28px;
-
-} */
-
-    .data__icon {
-      width: 100%;
-      height: 100%;
-      background-image: url(images/plus.svg);
-      background-repeat: no-repeat;
-      background-size: contain; /* コンテナ内に収める */
-      background-position: center;
-    }
-
-    .data__icon {
-      width: 100%;
-      height: 100%;
-      background-image: url(images/minus.svg);
-      background-repeat: no-repeat;
-      background-size: contain; /* コンテナ内に収める */
-      background-position: center;
-    }
-
-    .data__list__link {
-      display: none;
-
-      @media screen and (max-width: 768px) {
-        margin-block-start: 26.5px;
-        margin-block-end: 30.5px;
-      }
-    }
-
-    .data__list__link {
-      display: flex;
-      margin-block-start: 38.5px;
-      @media screen and (max-width: 768px) {
-        margin-block-start: 26.5px;
-      }
-    }
-
-    .data__list__item {
-      display: flex;
-      gap: 24px;
-      @media screen and (max-width: 768px) {
-        display: block;
-        font-size: 15px;
-      }
-    }
-
-    .data__list__item li:nth-child(1) {
-      @media screen and (max-width: 768px) {
-        margin-block-end: 29px;
-      }
-    }
-
-    .list__arrow {
-      position: relative;
-      /* display: inline-block; */
-      padding-left: 20px;
-    }
-
-    .list__arrow:before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border: 0;
-      border-top: solid 1px #fff;
-      border-right: solid 1px #fff;
-      transform: rotate(45deg);
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      margin: auto;
-    }
-
-    .link__site--area {
-      width: 106px;
-      position: relative;
-      margin-block-start: 46px;
-      margin-inline-start: 334px;
-    }
-
-    .link__site {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      gap: 10px;
-      border-bottom: 1px solid #484848;
-      @media screen and (max-width: 768px) {
-        display: none;
-      }
-    }
-
-    .link__site img {
-      width: 12px;
-      height: 12px;
-    }
-
-    .link__entry--sp a {
-      display: none;
-
-      @media screen and (max-width: 768px) {
-        display: flex;
-        color: #fff;
-        width: 312px;
-        height: 46px;
-        border: 1px solid #fff;
-        align-items: center;
-        justify-content: center;
-        margin-block-start: 62px;
-      }
-    }
-
-    .sp__btn {
-      width: 312px;
-      height: 46px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .sp__btn:hover {
-      color: #000;
-      background: #fff;
-      opacity: 1;
-    }
-    .hamburger__menu.active {
-      display: block;
-    }
-  }
+  /* ここからスマホ */
+
+  /* .hamburger__menu--area {
+    display: flex;
+  } */
 </style>
-
-<script>
-  //   $(document).ready(function() {
-  //   $('.header__hamburger--menu').on('click', function() {
-  //     $(this).toggleClass('active');
-  //     $('.hamburger__menu').toggleClass('active');
-
-  //   });
-  // });
-
-  // $(function () {
-  //   // ハンバーガーボタンクリックで実行
-  //   $(".header__hamburger--menu").click(function () {
-  //     $(this).toggleClass("active");
-  //     $(".hamburger__menu").toggleClass("active");
-  //   });
-  //   // function
-  // });
-
-  $(function () {
-    $('.title__position').on('click', function () {
-      $(this).toggleClass('active');
-      $('.position__list__link').toggleClass('active');
-      $('.accordion__icon').toggleClass('active');
-    });
-  });
-
-  $(function () {
-    $('.title__position').on('click', function () {
-      $(this).toggleClass('active');
-      $('.position__list__link').toggleClass('active');
-      $('.accordion__icon').toggleClass('active');
-    });
-  });
-
-  $(function () {
-    $('.title__crosstalk').on('click', function () {
-      $(this).toggleClass('active');
-      $('.crosstalk__list__link').toggleClass('active');
-      $('.crosstalk__icon').toggleClass('active');
-    });
-  });
-
-  $(function () {
-    $('.title__data').on('click', function () {
-      $(this).toggleClass('active');
-      $('.data__list__link').toggleClass('active');
-      $('.data__icon').toggleClass('active');
-    });
-  });
-</script>
